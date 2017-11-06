@@ -1,6 +1,5 @@
 ![45%, inline, right](GDG_DevFest_Logo_2017.png)
 
-<br/ >
 # Pragmatic **Kotlin :heart:**
 ##### Practical Tips to migrate your Android App to Kotlin
 ###### By Ravindra Kumar [@ravidsrk](https://twitter.com/ravidsrk) 
@@ -36,76 +35,9 @@
 Once you learn basics syntax of **Kotlin**
 
 1. Convert files, one by one, via **"⌥⇧⌘K",** make sure tests still pass
-
----
-
-# Steps to **Convert**
-
-Once you learn basics syntax of **Kotlin**
-
-1. Convert files, one by one, via **"⌥⇧⌘K",** make sure tests still pass
-2. Go over the Kotlin files and make them more [idiomatic](https://blog.philipphauer.de/idiomatic-kotlin-best-practices/).
-
----
-
-# Steps to **Convert**
-
-Once you learn basics syntax of **Kotlin**
-
-1. Convert files, one by one, via **"⌥⇧⌘K",** make sure tests still pass
-2. Go over the Kotlin files and make them more [idiomatic](https://blog.philipphauer.de/idiomatic-kotlin-best-practices/).
-3. Repeat step 2 until you convert all the files.
-
----
-
-# Steps to **Convert**
-
-Once you learn basics syntax of **Kotlin**
-
-1. Convert files, one by one, via **"⌥⇧⌘K",** make sure tests still pass
 2. Go over the Kotlin files and make them more [idiomatic](https://blog.philipphauer.de/idiomatic-kotlin-best-practices/).
 3. Repeat step 2 until you convert all the files.
 4. Ship it.
-
----
-
-# Common Converter **Issues**
-
-* TypeCasting for the sake of Interoperability.
-
----
-
-# Common Converter **Issues**
-
-* TypeCasting for the sake of Interoperability.
-* *Companion* will add extra layer.
-
----
-
-# Common Converter **Issues**
-
-* TypeCasting for the sake of Interoperability.
-* *Companion* will add extra layer.
-* If java method starting with getX(), converter looks for property with the name X.
-
----
-
-# Common Converter **Issues**
-
-* TypeCasting for the sake of Interoperability.
-* *Companion* will add extra layer.
-* If java method starting with getX(), converter looks for property with the name X.
-* Generics are hard to get it right on the first go.
-
----
-
-# Common Converter **Issues**
-
-* TypeCasting for the sake of Interoperability.
-* *Companion* will add extra layer.
-* If java method starting with getX(), converter looks for property with the name X.
-* Generics are hard to get it right on the first go.
-* No argument captor.
 
 ---
 
@@ -138,8 +70,6 @@ public class DemoFragment extends BaseFragment implements DemoView {
 
 ---
 
-# **TypeCasting** for the sake of **Interoperability**
-
 ```kotlin
 // Kotlin class
 class DemoResponse {
@@ -170,8 +100,6 @@ public class DetailActivity extends BaseActivity implements DetailMvpView{
 
 ---
 
-# **Companion** will add extra layer
-
 Converted Kotlin class:
 
 ```kotlin
@@ -190,8 +118,6 @@ class DetailActivity : BaseActivity(), DetailMvpView {
 
 ---
 
-# **Companion** will add extra layer
-
 ```java
 public class MainActivity extends BaseActivity implements MainMvpView {
   private void pokemonClicked(Pokemon pokemon) {
@@ -200,8 +126,6 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 }
 ```
 ---
-
-# **Companion** will add extra layer
 
 ```java
 public class MainActivity extends BaseActivity implements MainMvpView {
@@ -230,8 +154,6 @@ public interface DemoService {
 ```
 
 ---
-
-# Method names starting with **get**
 
 ```kotlin
 interface DemoService {
@@ -313,8 +235,6 @@ fun updateTransactions() {
 
 ---
 
-# Use **lateinit**
-
 ```kotlin
 private lateinit var adapter: RecyclerAdapter<Droids>
 
@@ -345,8 +265,6 @@ fun uploadClicked() {
 
 ---
 
-# Use **let** function
-
 ```kotlin
 private var photoUrl: String? = null
 
@@ -373,8 +291,6 @@ fun getUserName(): String {
 ```
 
 ----
-
-# User **Elvis** operator
 
 Elvis operator is great when you have a fallback value for the null case. So you can replace this:
 
